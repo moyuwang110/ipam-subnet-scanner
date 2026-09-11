@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="轻量级 IPAM 子网扫描与管理系统" />
+    <title>IPAM · 子网管理</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="#/" class="brand" aria-label="IPAM 主页">
+        <span class="brand-mark" aria-hidden="true">▣</span>
+        <span class="brand-text">IPAM 子网管理</span>
+      </a>
+      <div class="status-indicator" id="global-status" role="status" aria-live="polite"></div>
+      <button
+        type="button"
+        id="theme-toggle"
+        class="theme-toggle"
+        aria-label="切换暗色或亮色主题"
+        title="切换暗色 / 亮色主题"
+        aria-pressed="false"
+      >
+        <span class="theme-icon" data-icon="moon" aria-hidden="true">◐</span>
+        <span class="theme-label">主题</span>
+      </button>
+    </header>
+    <main id="view" tabindex="-1"></main>
+    <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+    <script type="module" src="/assets/app.js"></script>
+  </body>
+</html>

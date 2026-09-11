@@ -1,0 +1,8 @@
+node_modules
+dist
+data/*.json
+data/*.pid
+*.log
+
+# Trae workspace metadata
+.trae/

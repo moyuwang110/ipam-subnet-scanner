@@ -1,0 +1,30 @@
+{
+  "name": "ipam-subnet-scanner",
+  "version": "0.1.0",
+  "description": "Lightweight Web IPAM: manage IPv4 subnets (CIDR), scan them with safe concurrent TCP probing on the server, and view results in a responsive grid. JSON-file persistence, REST API, vanilla TypeScript SPA.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "node --import tsx/esm src/server/index.ts",
+    "start": "node --import tsx/esm src/server/index.ts",
+    "bg:start": "node scripts/daemon.mjs start",
+    "bg:stop": "node scripts/daemon.mjs stop",
+    "bg:restart": "node scripts/daemon.mjs restart",
+    "bg:status": "node scripts/daemon.mjs status",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --import tsx/esm --test test/*.test.ts"
+  },
+  "dependencies": {
+    "@fastify/static": "7.0.4",
+    "fastify": "4.28.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.12.12",
+    "tsx": "4.19.2",
+    "typescript": "5.4.5"
+  }
+}
